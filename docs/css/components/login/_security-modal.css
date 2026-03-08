@@ -1,0 +1,56 @@
+.security-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+
+.security-modal__content {
+    background: black;
+    border: 0.125rem solid var(--cor-destaque);
+    padding: 2.5rem;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.content__security-alert {
+    color: var(--cor-destaque);
+    font-weight: 700;
+    letter-spacing: 0.188rem;
+    
+    animation: securityAlertAnim 1s 0.5s infinite;
+}
+
+.content__text {
+    color: #aaa;
+    font-size: 1.rem;
+    margin: 0.625rem 0;
+}
+
+.content__security-system {
+    color: #aaa;
+    padding-top: 1.5rem;
+}
+
+@keyframes securityAlertAnim {
+    0% {
+    opacity: 100%;
+    }
+    100% {
+    opacity: 0
+    }
+}

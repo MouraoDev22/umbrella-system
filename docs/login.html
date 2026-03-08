@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/app.css" type="text/css">
+    <link rel="icon" href="./assets/images/Umbrella_Corporation_logo.svg" type="image/x-icon">
+    <script src="./js/app.js" type="module"></script>
+</head>
+<body>
+    <section class="login">
+        <img src="./assets/images/Umbrella_Corporation_logo.svg" alt="Umbrella Corporation Logo" class="login__logo">
+        <form class="login__form" id="login__form">
+            <input type="password" placeholder="ACCESS KEY" class="form__password" id="password">
+            <button type="submit" class="form__button">ENTER</button>
+        </form>
+        <span class="login__text" id="login__text"></span>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer__info">
+            <span class="info__span">UMBRELLA INTERNAL NETWORK</span>
+            <span class="info__span">AUTHORIZED PERSONNEL ONLY</span>
+        </div>
+    </footer>
+    
+    <div class="security-modal" id="security-modal">
+        <div class="security-modal__content">
+            <h2 class="content__security-alert">SECURITY ALERT</h2>
+            <p class="content__text" id="terminal-text"></p>
+            <span class="content__security-system">UMBRELLA SECURITY SYSTEM</span>
+        </div>
+    </div>
+    
+    <div id="red-flash"></div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+.login {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.login__logo {
+    width: 13rem;
+}
+
+.login__form {
+    display: flex;
+    gap: 2rem;
+    height: 2rem;
+}
+
+.login__text {
+    display: none;
+    font-size: 1.5rem;
+    height: 2rem;
+}
+
+.form__password {
+    padding: 0.625rem;
+    border: 0.063rem solid var(--cor-divisores);
+    
+    background: var(--cor-fundo-secundaria);
+    color: var(--cor-texto-primaria);
+    
+    width: 25rem;
+    transition: border 0.2s;
+}
+
+.form__password::placeholder {
+    color: var(--cor-placeholder);
+    letter-spacing: 0.063rem;
+}
+
+
+.form__password:focus {
+    outline: none;
+    border: 0.063rem solid var(--cor-destaque);
+}
+
+.form__button {
+    
+    border: none;
+
+    background: var(--cor-destaque);
+    color: var(--cor-fundo-primaria);
+
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.form__button:hover {
+    background: var(--cor-hover);
+}
+
+@media (max-width: 768px) {
+    .login__form {
+        gap: 1rem;
+    }
+    
+    .login__logo {
+        width: 10rem;
+    }
+    
+    .form__password {
+        width: 10rem;
+    }
+}
