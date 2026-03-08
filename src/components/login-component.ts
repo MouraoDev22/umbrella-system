@@ -32,9 +32,15 @@ async function verifyLogin(login: Function, openSecurityModal: Function): Promis
     const passwordGiven: string = inputPassword.value;
 
     loginForm.reset();
-    loginForm.style.display = 'none';
-    spanLoginText.style.display = 'block';
-    typeText('AUTHENTICATING', 'login__text', 50);
+    
+    loginForm.style.animation = 'closeElement 0.5s ease-in-out forwards';
+    
+    setTimeout((): void => {
+        loginForm.style.display = 'none';
+        spanLoginText.style.display = 'block';
+        typeText('AUTHENTICATING', 'login__text', 50);
+        return;
+    }, 1000);
 
     setTimeout((): void => {
         if (password === passwordGiven) {
@@ -57,7 +63,7 @@ function login(): void {
     setTimeout((): void => {
         window.location.href = 'dashboard.html';
         return;
-    }, 5000);
+    }, 2500);
     return;
 };
 

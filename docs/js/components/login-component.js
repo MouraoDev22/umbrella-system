@@ -30,9 +30,13 @@ async function verifyLogin(login, openSecurityModal) {
     const password = 'umbrella';
     const passwordGiven = inputPassword.value;
     loginForm.reset();
-    loginForm.style.display = 'none';
-    spanLoginText.style.display = 'block';
-    typeText('AUTHENTICATING', 'login__text', 50);
+    loginForm.style.animation = 'closeElement 0.5s ease-in-out forwards';
+    setTimeout(() => {
+        loginForm.style.display = 'none';
+        spanLoginText.style.display = 'block';
+        typeText('AUTHENTICATING', 'login__text', 50);
+        return;
+    }, 1000);
     setTimeout(() => {
         if (password === passwordGiven) {
             login();
@@ -56,7 +60,7 @@ function login() {
     setTimeout(() => {
         window.location.href = 'dashboard.html';
         return;
-    }, 5000);
+    }, 2500);
     return;
 }
 ;
