@@ -1,5 +1,8 @@
-const SecurityAlarm: any = {
-    getAudio(): object {
+import { ObjectAlarm } from "../types/ObjetctAlarm.js";
+import { SecurityAlarm } from "../types/SecurityAlarm.js";
+
+const SecurityAlarm: ObjectAlarm = {
+    getAudio(): SecurityAlarm {
         const alarm: HTMLAudioElement | null = new Audio('./assets/audio/alarm.mp3');
         if (!alarm) throw new Error('HTMLAudioElement(alarm) not found!');
 
@@ -16,7 +19,8 @@ const SecurityAlarm: any = {
     },
 
     playAlarm(): void {
-        const securityAlarm: any = this.getAudio();
+        const securityAlarm: SecurityAlarm = this.getAudio() as SecurityAlarm;
+        if (!securityAlarm) throw new Error('SecurityAlarm not found!');
         
         securityAlarm.alarm.play();
         securityAlarm.youWillBePurged.play();

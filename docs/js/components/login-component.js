@@ -1,4 +1,4 @@
-import SecurityAlarm from "../utils/security-alarm.js";
+import SecurityAlarm from "../utils/SecurityAlarm.js";
 import { typeText } from "../utils/typeText.js";
 const loginForm = document.querySelector('#login__form');
 if (!loginForm)

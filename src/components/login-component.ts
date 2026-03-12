@@ -1,4 +1,4 @@
-import SecurityAlarm from "../utils/security-alarm.js";
+import SecurityAlarm from "../utils/SecurityAlarm.js";
 import { typeText } from "../utils/typeText.js";
 
 const loginForm: HTMLFormElement | null = document.querySelector<HTMLFormElement>('#login__form');
