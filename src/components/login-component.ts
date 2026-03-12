@@ -1,4 +1,4 @@
-import { playAlarm } from "../utils/playAlarm.js";
+import SecurityAlarm from "../utils/security-alarm.js";
 import { typeText } from "../utils/typeText.js";
 
 const loginForm: HTMLFormElement | null = document.querySelector<HTMLFormElement>('#login__form');
@@ -71,7 +71,7 @@ function openSecurityModal():void {
     if (!securityModal) throw new Error('HTMLDivElement(securityModal) not found!');
     if (!redFlash) throw new Error('HTMLDivElement(redFlash) not found!');
     
-    playAlarm();
+    SecurityAlarm.playAlarm();
     typeText("ACCESS DENIED — UNAUTHORIZED USER DETECTED — YOU WILL BE PURGED", "terminal-text", 100);
     
     redFlash.classList.add('flash-active');
