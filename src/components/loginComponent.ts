@@ -1,3 +1,4 @@
+import SecurityModal from "../components/securityModalComponent.js";
 import SecurityAlarm from "../utils/SecurityAlarm.js";
 import { typeText } from "../utils/typeText.js";
 
@@ -47,7 +48,7 @@ async function verifyLogin(login: Function, openSecurityModal: Function): Promis
             login();
             return;
         } else {
-            openSecurityModal();
+            SecurityModal.open();
             return;
         };
     }, 5000);

@@ -1,3 +1,4 @@
+import SecurityModal from "../components/securityModalComponent.js";
 import SecurityAlarm from "../utils/SecurityAlarm.js";
 import { typeText } from "../utils/typeText.js";
 const loginForm = document.querySelector('#login__form');
@@ -43,7 +44,7 @@ async function verifyLogin(login, openSecurityModal) {
             return;
         }
         else {
-            openSecurityModal();
+            SecurityModal.open();
             return;
         }
         ;

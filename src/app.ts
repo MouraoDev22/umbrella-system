@@ -1,1 +1,1 @@
-import './components/login-component.js';
+import './components/loginComponent.js';
