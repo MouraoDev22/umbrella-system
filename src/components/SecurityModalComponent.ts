@@ -1,7 +1,8 @@
-import securityAlarm from '../utils/securityAlarm.js';
+import { SecurityModal } from '../types/SecurityModal.js';
 import { typeText } from '../utils/typeText.js';
+import securityAlarm from '../utils/securityAlarm.js';
 
-const securityModal: any = {
+const securityModal: SecurityModal = {
     open(): void {
         const securityModal: HTMLDivElement | null = document.querySelector<HTMLDivElement>('#security-modal');
         if (!securityModal) throw new Error('HTMLDivElement(securityModal) not found!');
