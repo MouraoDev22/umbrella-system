@@ -1,4 +1,4 @@
-const SecurityAlarm = {
+const securityAlarm = {
     getAudio() {
         const alarm = new Audio('./assets/audio/alarm.mp3');
         if (!alarm)
@@ -12,7 +12,7 @@ const SecurityAlarm = {
         youWillBePurged.loop = true;
         return { alarm, youWillBePurged };
     },
-    playAlarm() {
+    play() {
         const securityAlarm = this.getAudio();
         if (!securityAlarm)
             throw new Error('SecurityAlarm not found!');
@@ -21,4 +21,4 @@ const SecurityAlarm = {
         return;
     }
 };
-export default SecurityAlarm;
+export default securityAlarm;

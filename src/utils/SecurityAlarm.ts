@@ -1,7 +1,7 @@
-import { ObjectAlarm } from "../types/ObjetctAlarm.js";
-import { SecurityAlarm } from "../types/SecurityAlarm.js";
+import { ObjectAlarm } from '../types/ObjetctAlarm.js';
+import { SecurityAlarm } from '../types/SecurityAlarm.js';
 
-const SecurityAlarm: ObjectAlarm = {
+const securityAlarm: ObjectAlarm = {
     getAudio(): SecurityAlarm {
         const alarm: HTMLAudioElement | null = new Audio('./assets/audio/alarm.mp3');
         if (!alarm) throw new Error('HTMLAudioElement(alarm) not found!');
@@ -18,7 +18,7 @@ const SecurityAlarm: ObjectAlarm = {
         return { alarm, youWillBePurged };
     },
 
-    playAlarm(): void {
+    play(): void {
         const securityAlarm: SecurityAlarm = this.getAudio() as SecurityAlarm;
         if (!securityAlarm) throw new Error('SecurityAlarm not found!');
         
@@ -29,4 +29,4 @@ const SecurityAlarm: ObjectAlarm = {
     }
 };
 
-export default SecurityAlarm;
+export default securityAlarm;

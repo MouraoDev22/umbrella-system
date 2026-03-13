@@ -1,7 +1,7 @@
-import SecurityAlarm from "../utils/SecurityAlarm.js";
-import { typeText } from "../utils/typeText.js";
+import securityAlarm from '../utils/securityAlarm.js';
+import { typeText } from '../utils/typeText.js';
 
-const SecurityModal: any = {
+const securityModal: any = {
     open(): void {
         const securityModal: HTMLDivElement | null = document.querySelector<HTMLDivElement>('#security-modal');
         if (!securityModal) throw new Error('HTMLDivElement(securityModal) not found!');
@@ -9,7 +9,8 @@ const SecurityModal: any = {
         const redFlash: HTMLDivElement | null = document.querySelector<HTMLDivElement>('#red-flash');
         if (!redFlash) throw new Error('HTMLDivElement(redFlash) not found');
 
-        SecurityAlarm.playAlarm();
+        securityAlarm.play();
+
         typeText("ACCESS DENIED — UNAUTHORIZED USER DETECTED — YOU WILL BE PURGED", "terminal-text", 100);
     
         redFlash.classList.add('flash-active');
@@ -18,4 +19,4 @@ const SecurityModal: any = {
     }
 };
 
-export default SecurityModal;
+export default securityModal;
