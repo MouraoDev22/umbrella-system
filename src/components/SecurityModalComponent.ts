@@ -1,4 +1,4 @@
-import { SecurityModal } from '../types/SecurityModal.js';
+import type { SecurityModal } from '../types/SecurityModal.js';
 import { typeText } from '../utils/typeText.js';
 import securityAlarm from '../utils/securityAlarm.js';
 
