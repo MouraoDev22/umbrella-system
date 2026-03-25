@@ -17,13 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 async function verifyLogin(login) {
-    const loginForm = document.querySelector('#login__form');
     if (!loginForm)
         throw new Error('HTMLFormElement(loginForm) not found!');
-    const spanLoginText = document.querySelector('#login__text');
     if (!spanLoginText)
         throw new Error('HTMLSpanElement(spanLoginText) not found!');
-    const inputPassword = document.querySelector('#password');
     if (!inputPassword)
         throw new Error('HTMLInputElement(inputPassword) not found!');
     const password = 'umbrella';
@@ -51,12 +48,6 @@ async function verifyLogin(login) {
 }
 ;
 function login() {
-    const loginForm = document.querySelector('#login__form');
-    if (!loginForm)
-        throw new Error('HTMLFormElement(loginForm) not found!');
-    const spanLoginText = document.querySelector('#login__text');
-    if (!spanLoginText)
-        throw new Error('HTMLSpanElement(spanLoginText) not found!');
     typeText('WELCOME, RESEARCHER 4412', 'login__text', 50);
     setTimeout(() => {
         window.location.href = 'dashboard.html';

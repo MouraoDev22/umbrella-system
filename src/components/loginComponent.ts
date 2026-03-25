@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', (): void => {
 });
 
 async function verifyLogin(login: Function): Promise<void> {
+    if (!loginForm) throw new Error('HTMLFormElement(loginForm) not found!');
+    if (!spanLoginText) throw new Error('HTMLSpanElement(spanLoginText) not found!');
+    if (!inputPassword) throw new Error('HTMLInputElement(inputPassword) not found!');
+    
     const password: string = 'umbrella';
     const passwordGiven: string = inputPassword.value;
 
