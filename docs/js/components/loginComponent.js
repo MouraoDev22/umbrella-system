@@ -1,9 +1,15 @@
 import securityModal from './securityModalComponent.js';
 import { typeText } from '../utils/typeText.js';
+const loginForm = document.querySelector('#login__form');
+if (!loginForm)
+    throw new Error('HTMLFormElement(loginForm) not found!');
+const spanLoginText = document.querySelector('#login__text');
+if (!spanLoginText)
+    throw new Error('HTMLSpanElement(spanLoginText) not found!');
+const inputPassword = document.querySelector('#password');
+if (!inputPassword)
+    throw new Error('HTMLInputElement(inputPassword) not found!');
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.querySelector('#login__form');
-    if (!loginForm)
-        throw new Error('HTMLFormElement(loginForm) not found!');
     loginForm.addEventListener('submit', async (event) => {
         event.preventDefault();
         await verifyLogin(login);

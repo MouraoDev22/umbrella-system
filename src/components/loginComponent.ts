@@ -1,10 +1,16 @@
 import securityModal from './securityModalComponent.js';
 import { typeText } from '../utils/typeText.js';
 
+const loginForm: HTMLFormElement | null = document.querySelector<HTMLFormElement>('#login__form');
+if (!loginForm) throw new Error('HTMLFormElement(loginForm) not found!');
+
+const spanLoginText: HTMLSpanElement | null = document.querySelector<HTMLSpanElement>('#login__text');
+if (!spanLoginText) throw new Error('HTMLSpanElement(spanLoginText) not found!');
+
+const inputPassword: HTMLInputElement | null = document.querySelector<HTMLInputElement>('#password');
+if (!inputPassword) throw new Error('HTMLInputElement(inputPassword) not found!');
+
 document.addEventListener('DOMContentLoaded', (): void => {
-    const loginForm: HTMLFormElement | null = document.querySelector<HTMLFormElement>('#login__form');
-    if (!loginForm) throw new Error('HTMLFormElement(loginForm) not found!');
-    
     loginForm.addEventListener('submit', async (event): Promise<void> => {
     event.preventDefault();
     
@@ -14,15 +20,6 @@ document.addEventListener('DOMContentLoaded', (): void => {
 });
 
 async function verifyLogin(login: Function): Promise<void> {
-    const loginForm: HTMLFormElement | null = document.querySelector<HTMLFormElement>('#login__form');
-    if (!loginForm) throw new Error('HTMLFormElement(loginForm) not found!');
-
-    const spanLoginText: HTMLSpanElement | null = document.querySelector<HTMLSpanElement>('#login__text');
-    if (!spanLoginText) throw new Error('HTMLSpanElement(spanLoginText) not found!');
-
-    const inputPassword: HTMLInputElement | null = document.querySelector<HTMLInputElement>('#password');
-    if (!inputPassword) throw new Error('HTMLInputElement(inputPassword) not found!');
-
     const password: string = 'umbrella';
     const passwordGiven: string = inputPassword.value;
 
@@ -50,12 +47,6 @@ async function verifyLogin(login: Function): Promise<void> {
 };
 
 function login(): void {
-    const loginForm: HTMLFormElement | null = document.querySelector<HTMLFormElement>('#login__form');
-    if (!loginForm) throw new Error('HTMLFormElement(loginForm) not found!');
-
-    const spanLoginText: HTMLSpanElement | null = document.querySelector<HTMLSpanElement>('#login__text');
-    if (!spanLoginText) throw new Error('HTMLSpanElement(spanLoginText) not found!');
-
     typeText('WELCOME, RESEARCHER 4412', 'login__text', 50);
 
     setTimeout((): void => {
