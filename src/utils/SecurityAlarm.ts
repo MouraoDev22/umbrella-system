@@ -1,5 +1,5 @@
-import type { ObjectAlarm } from '../types/ObjetctAlarm.js';
-import type { SecurityAlarm } from '../types/SecurityAlarm.js';
+import { ObjectAlarm } from '../types/ObjetctAlarm.js';
+import { SecurityAlarm } from '../types/SecurityAlarm.js';
 
 const securityAlarm: ObjectAlarm = {
     getAudio(): SecurityAlarm {
