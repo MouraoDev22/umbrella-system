@@ -19,11 +19,11 @@ const securityAlarm: ObjectAlarm = {
     },
 
     play(): void {
-        const securityAlarm: SecurityAlarm = this.getAudio() as SecurityAlarm;
-        if (!securityAlarm) throw new Error('SecurityAlarm not found!');
+        const sAlarm: SecurityAlarm = this.getAudio() as SecurityAlarm;
+        if (!sAlarm) throw new Error('sAlarm not found!');
         
-        securityAlarm.alarm.play();
-        securityAlarm.youWillBePurged.play();
+        sAlarm.alarm.play();
+        sAlarm.youWillBePurged.play();
 
         return;
     }

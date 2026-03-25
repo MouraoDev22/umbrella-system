@@ -13,11 +13,11 @@ const securityAlarm = {
         return { alarm, youWillBePurged };
     },
     play() {
-        const securityAlarm = this.getAudio();
-        if (!securityAlarm)
-            throw new Error('SecurityAlarm not found!');
-        securityAlarm.alarm.play();
-        securityAlarm.youWillBePurged.play();
+        const sAlarm = this.getAudio();
+        if (!sAlarm)
+            throw new Error('sAlarm not found!');
+        sAlarm.alarm.play();
+        sAlarm.youWillBePurged.play();
         return;
     }
 };
