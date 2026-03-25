@@ -1,4 +1,4 @@
-import securityModal from './securityModalComponent.js';
+import securityModal from './modalComponent.js';
 import { typeText } from '../utils/typeText.js';
 const loginForm = document.querySelector('#login__form');
 if (!loginForm)
