@@ -1,5 +1,5 @@
 import { typeText } from '../utils/typeText.js';
-import securityAlarm from '../utils/securityAlarm.js';
+import securityAlarm from '../utils/alarm.js';
 const securityModal = {
     open() {
         const modalElement = document.querySelector('#security-modal');

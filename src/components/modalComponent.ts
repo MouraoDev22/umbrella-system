@@ -1,6 +1,6 @@
 import { SecurityModal } from '../types/SecurityModal.js';
 import { typeText } from '../utils/typeText.js';
-import securityAlarm from '../utils/securityAlarm.js';
+import securityAlarm from '../utils/alarm.js';
 
 const securityModal: SecurityModal = {
     open(): void {
